@@ -20,7 +20,7 @@ document.querySelector('.into_bk').addEventListener('click', (e) => {
   document.querySelector('.bk_process').classList.toggle('actice_bk')
 })
 
-// dark mode
+// dark mode mobile
 const toggleSwitch = document.querySelector(
   '.theme-switch input[type="checkbox"]'
 )
@@ -45,3 +45,14 @@ function switchTheme(e) {
 }
 
 toggleSwitch.addEventListener('change', switchTheme, false)
+
+// button color change
+var button = document.querySelector('.button_desc')
+
+button.onclick = function () {
+  var red = Math.floor(Math.random() * 256)
+  var blue = Math.floor(Math.random() * 256)
+  var green = Math.floor(Math.random() * 256)
+
+  this.style.backgroundColor = 'rgb(' + red + ',' + green + ',' + blue + ')'
+}
